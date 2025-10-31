@@ -1,1 +1,2 @@
-# JQ_Project
+# JQ ระบบจองคิวร้านอาหาร
+http://202.44.40.193/~cs6636461/JQ/Homepage.php
