@@ -1,32 +1,41 @@
 <?php
 include "connect.php";
 
-// ตรวจสอบว่ามีค่า username ถูกส่งมาหรือไม่
-if (!isset($_GET["username"])) {
-    echo "denied";
-    exit();
+$response = "denied";
+$column_to_check = null;
+$value_to_check = null;
+
+if (isset($_GET["username"])) {
+    $column_to_check = "username";
+    $value_to_check = trim($_GET["username"]);
+
+} elseif (isset($_GET["fullname"])) {
+    $column_to_check = "fullname"; 
+    $value_to_check = trim($_GET["fullname"]);
 }
 
-$username = trim($_GET["username"]);
+if ($column_to_check && !empty($value_to_check)) {
 
-$sql = "SELECT COUNT(*) FROM jq_users WHERE username = :username";
+    $sql = "SELECT COUNT(*) FROM jq_users WHERE " . $column_to_check . " = :value";
 
-try {
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-    $stmt->execute();
-    $count = $stmt->fetchColumn();
-    
-    if ($count == 0) { //ไม่ซ้ำ
-        echo "okay";
-    } else {
-        echo "denied"; //ซ้ำ
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':value', $value_to_check, PDO::PARAM_STR);
+        $stmt->execute();
+        $count = $stmt->fetchColumn();
+        
+        if ($count == 0) {
+            $response = "okay"; //ไม่ซ้ำ
+        } else {
+            $response = "denied"; //ซ้ำ
+        }
+
+    } catch (PDOException $e) {
+        error_log("Database error in checkName.php: " . $e->getMessage());
     }
-
-} catch (PDOException $e) {
-    error_log("Database error in checkName.php: " . $e->getMessage());
-    echo "denied";
 }
+
 usleep(100000);
+echo $response;
 
 ?>

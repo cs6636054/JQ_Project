@@ -41,6 +41,31 @@
             xmlHttp.open("GET", url, true);
             xmlHttp.send();
         }
+
+        function checkFullname() {
+            var input = document.getElementById("fullname_input");
+            var fullname = input.value.trim();
+            if(fullname === "") return;
+
+            input.className = "thinking";
+
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    if (xmlHttp.responseText.trim() === "okay") {
+                        input.className = "approved";
+                    } else {
+                        input.className = "denied";
+                        input.focus();
+                        input.select();
+                    }
+                }
+            };
+
+            var url = "checkName.php?fullname=" + encodeURIComponent(fullname);
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send();
+        }
     </script>
 </head>
 <body>
@@ -54,7 +79,7 @@
                 <label for="username_input">Username : </label> 
                 <input type="text" id="username_input" name="username" 
                        placeholder="Enter your username" pattern=".+" required
-                       onblur="checkUsername()"  oninput="resetStatus()"><br>
+                       onblur="checkUsername()"  oninput="resetStatus('username_input')"><br>
 
                 <label for="password_input">Password : </label>
                 <input type="password" id="password_input" name="password" 
@@ -62,7 +87,8 @@
 
                 <label for="fullname_input">Fullname : </label>
                 <input type="text" id="fullname_input" name="fullname" 
-                       placeholder="Enter your fullname" pattern=".+" required><br>
+                       placeholder="Enter your fullname" pattern=".+" required
+                       onblur="checkFullname()" oninput="resetStatus('fullname_input')"><br>
 
                 <label for="email_input">Email : </label>
                 <input type="text" id="email_input" name="email" 
