@@ -1,0 +1,523 @@
+* {
+    font-family: "Prompt", sans-serif;
+}
+body {
+    background-color: antiquewhite;
+    margin: 0px;
+    
+}
+nav {
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.nav-bar a:hover {
+    background: rgba(255,255,255,0.2);
+}
+.logo{
+   padding: 5px;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+}
+.profile {
+    margin-left: auto;
+}
+.back {
+    margin-top: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 45px;
+    margin-left: 30px;
+    background-color: brown;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.back a {
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back:hover {
+    background-color: #e6735a;
+}
+
+
+.search-bar {
+    padding: 10px;
+    text-align: center;
+}
+
+.search-container {
+    text-align: center;
+}
+  
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    width: 300px;
+    border: none;
+    gap: 60px;
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+.search-container button {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 30px;
+    margin-left: -5px;
+    background: #ddd;
+    font-size: 17px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.search-container input::placeholder {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+
+.search-container button:hover {
+    background: #711a1a;
+    color: white;
+  }
+  
+.show-restaurant{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: brown;
+    border: 1px solid rgb(61, 61, 61);  
+}
+.show-restaurant h2{
+    text-align: center;
+    color: #ffffff;
+}
+.show-restaurant .show-res .show-info{
+    display: block;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.show-img-info img{
+    border-radius: 50%;
+}
+.show-img-info {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 10px;
+    padding: 20px;
+}
+.link-booking-page{
+    text-decoration: none;
+    color: black;
+}
+.login-box {
+    background-color: brown;
+    border-radius: 20px;
+    width: 300px;
+    height: 320px;
+    margin: auto;
+    margin-top: 160px;
+}
+
+.login-box .form-login , .insert-member{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 30px;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"],
+.insert-member input[type="text"],
+.insert-member input[type="password"] {
+   border-radius: 20px;
+   width: 200px;
+   height: 30px;
+   border: none;
+   margin: 10px;
+
+}
+
+.form-login label {
+    align-self: flex-start; 
+    margin-left: 10%; 
+
+}
+
+.login-box .form-login input[type="submit"],
+.insert-member input[type="submit"] {
+    background-color: rgb(247, 243, 199);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(117, 8, 8);
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    gap: 10px;
+
+}
+.form-login input::placeholder
+{
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    
+}
+
+.register button {
+    background-color: rgb(247, 243, 199);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(117, 8, 8);
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.insert-member{
+    background-color: brown;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    margin-top: 160px;
+}
+
+.insert-member input[type="submit"] {
+    margin-left: 33%;
+}
+
+.success-insert-member {
+    background-color: brown;
+    border-radius: 20px;
+    width: 350px;
+    height: 120px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+.logout button{
+    background-color: rgb(117, 8, 8);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(247, 243, 199);
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+#Profile-info {
+    margin-left: 30px;
+}
+
+span h1:only-of-type {
+    margin-left: 20px;
+}
+
+span h1::first-line {
+    color: rgb(126, 65, 75);
+}
+
+#booking-title {
+    margin-left: 20px;
+}
+
+.booking-page input[type="submit"] {
+    background-color: rgb(247, 243, 199);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(117, 8, 8);
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.booking-page {
+    margin-left: 30px;
+}
+#booking-title {
+    color: rgb(48, 37, 37);
+    text-align: center;
+    font-size: 30px;
+}
+.booking-page {
+    background-color: brown;
+    border-radius: 30px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+    color: white;
+  
+}
+.select-people {
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+   
+}
+.select-people input[type="number"]{
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.time-booking{
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 40px;
+
+}
+.time-booking input[type="datetime-local"]{
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.booking-page input[type="submit"] {
+    background-color: rgb(247, 243, 199);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(117, 8, 8);
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-left: 90px;
+    
+}
+.success-message {
+    background-color: brown;
+    border-radius: 20px;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+.success-message h2 {
+    text-align: center;
+    font-weight: bold;
+}
+.button-back-home a {
+    text-decoration: none;
+    color: #920f0f;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    
+}
+.button-back-home{
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 239, 187);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 30px;
+    
+}
+
+.myqueue {
+    background-color: brown;
+    border-radius: 20px;
+    width: 300px;
+    height: 160px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.myqueue p {
+    color: white;
+    font-size: larger;
+}
+
+span h2 {
+    text-align: center;
+}
+
+.logout-success button{
+    background-color: rgb(117,8,8);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(247, 243, 199);
+    width: 180px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#logout-succ {
+    margin-top: 20px;
+}
+
+.login-again button {
+    background-color: rgb(117,8,8);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(247, 243, 199);
+    width: 180px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.notification-item {
+    background-color: brown;
+    border-radius: 20px;
+    width: 350px;
+    height: 80px;
+    color: white;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+.notify-message, .notify-time {
+    margin: 5px 0; 
+}
+.report-table {
+    width: 80%;
+    margin: 30px auto; 
+    border-collapse: collapse; 
+    font-size: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none; 
+    box-shadow: none;
+}
+
+.report-table th,
+.report-table td {
+    border: none; 
+    padding: 12px;
+    text-align: center;
+}
+
+.report-table td {
+    background-color: #fff;
+}
+
+
+.report-table tr:nth-child(even) td {
+    background-color: #efcece; 
+}
+
+
+.report-table th {
+    background-color: brown;
+    color: #fff;
+    font-weight: bold;
+}
+.register a{
+    text-decoration: none;
+    
+}
+.register {
+    margin-top: -10px;
+}
+
+.report-table tr:hover td {
+    background-color: #f6f7d1; 
+    
+}
+.report-title {
+    text-align: center;
+    margin: 20px auto;      
+    padding: 10px 20px;      
+    font-size: 25px;       
+    color: brown ;        
+    background-color: rgb(247, 243, 199);  
+    border-radius: 20px;      
+    width: fit-content; 
+}
+
+.gotohome button { 
+    background-color: rgb(247, 243, 199);
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(117, 8, 8);
+    width: 100px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+#Profile-info h3 + h3 {
+    font-style: italic;
+}

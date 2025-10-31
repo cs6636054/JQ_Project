@@ -1,0 +1,73 @@
+@media screen and (max-width:480px) {
+    .show-img-info  {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    /* จัดให้ข้อความมีพื้นที่เหลือ */
+    .show-info {
+        flex-grow: 1;
+        padding-left: 10px;
+    }
+
+    .search-container form {
+        max-width: 300px; 
+        margin: 0 auto; 
+        display: flex;
+        box-sizing: border-box;
+    }
+    span h1{
+        text-align: center;
+    }
+    #Profile-info {
+        text-align: center;
+        width: 90%; 
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .nav-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+    }
+    .nav-bar .logo {
+        display: none;
+    }
+    .nav-bar a {
+        text-align: center;
+        flex-grow: 1;
+        font-size: medium;
+    }
+    .profile {
+        margin-left: 0%;
+    }
+    
+    .nav-bar .nav-item {
+        display: block;
+        margin-top: 0px;
+    }
+
+    .nav-bar span {
+        display: none;
+    }
+    .nav-bar {
+        padding: 0;
+        margin: 100;
+    }
+    .search-container {
+        position: sticky;
+        top: 0;
+    }
+    .show-restaurant {
+        padding-bottom: 70px;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
